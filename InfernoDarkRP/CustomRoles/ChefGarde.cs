@@ -25,8 +25,7 @@ namespace InfernoDarkRP.CustomRoles
             $"{ItemType.Painkillers}",
             $"{ItemType.Radio}",
             $"{ItemType.ArmorCombat}",
-            $"{ItemType.Jailbird}",
-            $"{ItemType.GunCrossvec}",
+            $"{ItemType.GunCrossvec}"
         };
         public override SpawnProperties SpawnProperties { get; set; } = new SpawnProperties()
         {
