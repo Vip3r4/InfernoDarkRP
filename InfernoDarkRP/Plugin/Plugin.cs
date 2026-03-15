@@ -37,6 +37,7 @@ namespace InfernoDarkRP.Plugin
             _chefgarde.Register();
             
             Exiled.Events.Handlers.Player.Dying += EventHandler.WhenSCPDie;
+            Exiled.Events.Handlers.Server.RoundStarted += EventHandler.OnRoundStart;
             
             Exiled.Events.Handlers.Server.RoundStarted += ScpContain.OnRoundStart;
             Exiled.Events.Handlers.Player.InteractingDoor += ScpContain.SCP049DoorOpen;
@@ -58,6 +59,7 @@ namespace InfernoDarkRP.Plugin
             _chefgarde.Unregister();
             
             Exiled.Events.Handlers.Player.Dying -= EventHandler.WhenSCPDie;
+            Exiled.Events.Handlers.Server.RoundStarted -= EventHandler.OnRoundStart;
             
             Exiled.Events.Handlers.Server.RoundStarted -= ScpContain.OnRoundStart;
             Exiled.Events.Handlers.Player.InteractingDoor -= ScpContain.SCP049DoorOpen;

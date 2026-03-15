@@ -47,5 +47,19 @@ namespace InfernoDarkRP.Features
 				return;
 			}
 		}
+
+		public void OnRoundStart()
+		{
+			foreach (Exiled.API.Features.Doors.Door door in Room.Get(RoomType.LczGlassBox).Doors)
+			{
+				door.KeycardPermissions = KeycardPermissions.ArmoryLevelOne;
+			}
+
+			foreach (Window window in Room.Get(RoomType.LczGlassBox).Windows)
+			{
+				window.DisableScpDamage = true;
+				window.Health = 200f;
+			}
+		}
 	}
 }
